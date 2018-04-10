@@ -12,10 +12,10 @@ app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = DEBUG
 ask = Ask(app, "/")
 logging.getLogger('flask_ask').setLevel(logging.DEBUG)
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s %(levelname)s %(message)s',
-                    filename='/tmp/myapp.log',
-                    filemode='w')
+#logging.basicConfig(level=logging.DEBUG
+#                    format='%(asctime)s %(levelname)s %(message)s',
+#                    filename='/tmp/myapp.log',
+#                    filemode='w')
 
 remoteConfig = {
     "name": "samsungctl",

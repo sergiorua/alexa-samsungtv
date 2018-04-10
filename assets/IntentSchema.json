@@ -1,0 +1,11 @@
+{
+  "intents": [{
+    "slots": [{
+        "name": "Key",
+        "type": "LIST_OF_KEYS"
+      },{
+        "name": "Direction",
+        "type": "LIST_OF_DIRECTIONS"
+      }
+    ]}
+  ]}

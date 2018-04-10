@@ -78,6 +78,6 @@ if __name__ == '__main__':
         verify = str(os.environ.get('ASK_VERIFY_REQUESTS', '')).lower()
         if verify == 'false':
             app.config['ASK_VERIFY_REQUESTS'] = False
-    app.run(debug=DEBUG)
+    app.run(debug=DEBUG, host="0.0.0.0")
 
 # vim: ts=4 expandtab

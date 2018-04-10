@@ -46,8 +46,6 @@ def press_remote_key(key_pressed):
 
     return Remote.control(k_code)
 
-    
-
 @ask.launch
 def start_skill():
     welcome_message = 'Hello to Samsung TV Remote'
@@ -73,7 +71,7 @@ def session_ended():
 def tv_button_pressed(key, direction):
     k=key + " " +direction
     press_remote_key(k)
-    return statement("ok").simple_card('tvButtonPressedReply', "ok")
+    return statement("ok").simple_card('The Tele', "ok")
 
 if __name__ == '__main__':
     if 'ASK_VERIFY_REQUESTS' in os.environ:

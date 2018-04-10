@@ -1,11 +1,90 @@
 {
-  "intents": [{
-    "slots": [{
-        "name": "Key",
-        "type": "LIST_OF_KEYS"
-      },{
-        "name": "Direction",
-        "type": "LIST_OF_DIRECTIONS"
-      }
-    ]}
-  ]}
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "the tele",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "tvButtonPressed",
+                    "slots": [
+                        {
+                            "name": "Key",
+                            "type": "LIST_OF_KEYS"
+                        },
+                        {
+                            "name": "Direction",
+                            "type": "LIST_OF_DIRECTIONS"
+                        }
+                    ],
+                    "samples": [
+                        "{Key} {Direction}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_DIRECTIONS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "down"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_KEYS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "channel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "volume"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "power"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
